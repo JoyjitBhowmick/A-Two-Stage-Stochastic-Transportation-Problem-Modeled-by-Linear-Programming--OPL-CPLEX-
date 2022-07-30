@@ -1,9 +1,3 @@
-/*********************************************
- * OPL 20.1.0.0 Model
- * Author: pazourlab
- * Creation Date: Apr 23, 2022 at 4:11:38 PM
- *********************************************/
-
 //Setting the number of scenarios
 int s= ...;
 range scenarios = 1..s;
