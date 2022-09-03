@@ -1,0 +1,28 @@
+s = 4;
+a = 8;
+demand = 300;
+shortcost = 200;
+
+
+// fixed cost of selecting edge i
+f = [273 152 169 164 210 264 123 178];
+
+
+
+//Capacity of edge i in scenario j
+u = [[271 279 202 279],
+[207 168 282 275],
+[169 282 172 273],
+[186 191 200 123],
+[163 128 118 154],
+[236 156 274 146],
+[190 264 298 257],
+[268 139 217 158]];
+
+
+//Shipping Cost for edge i
+shipcost = [12	21	20	26	22	15	16	24];
+
+
+// Probability of scenario s
+prob = [0.3, 0.2, 0.4, 0.1];
