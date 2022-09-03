@@ -21,7 +21,7 @@ u = [[271 279 202 279],
 
 
 //Shipping Cost for edge i
-shipcost = [12	21	20	26	22	15	16	24];
+shipcost = [12 21 20 26	22 15 16 24];
 
 
 // Probability of scenario s
