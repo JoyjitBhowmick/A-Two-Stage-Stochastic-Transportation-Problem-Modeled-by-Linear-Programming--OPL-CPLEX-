@@ -11,6 +11,13 @@ z_e =
 \end{aligned}
 $$
 
+$$
+\begin{aligned}
+a + b &= c \\
+d &= e
+\end{aligned}
+$$
+
 Our second stage decision variable $x_e^s$ is the flow on arc \textit{e} in scenario $s$.
 
 Deterministic data are defined below:
