@@ -1,0 +1,332 @@
+\documentclass[12pt, oneside]{article} 
+\usepackage{amsmath, amsthm, amssymb, calrsfs, wasysym, verbatim, bbm, color, graphics, geometry, setspace, listings}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\setlength{\parindent}{4em}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+
+% figures & tables
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tabu}
+\newsavebox\mybox
+
+%% editing
+\usepackage[shortlabels]{enumitem}
+\usepackage[normalem]{ulem}
+
+%% macros for commenting
+\usepackage{mathtools}
+\usepackage[normalem]{ulem} % to use \sout
+
+%% math packages
+% \usepackage{amsmath} % not needed for Springer
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+            
+%% a light-weight algorithm environment
+\newtheorem{algo}{Algorithm}
+
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+\DeclareMathOperator*{\Min}{minimize}
+\DeclareMathOperator*{\Max}{maximize}
+\DeclareMathOperator{\vspan}{span}
+
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vp}{{\mathbf{p}}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vx}{{\mathbf{x}}}
+\newcommand{\vy}{{\mathbf{y}}}
+\newcommand{\vz}{{\mathbf{z}}}
+\newcommand{\vA}{\mathbf{A}}
+
+
+\newcommand{\RR}{\mathbb{R}}
+
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+\newcommand{\bp}{\Big(}
+\newcommand{\bpp}{\Big)}
+\newcommand{\blv}{\Bigg \langle} %big left vector for matrix
+\newcommand{\brv}{\Bigg \rangle}
+\newcommand{\rlv}{\Big\langle} %regular left vector
+\newcommand{\rrv}{\Big\rangle}
+\newcommand{\0}{^{(0)}}
+\newcommand{\1}{^{(1)}}
+\newcommand{\2}{^{(2)}}
+\newcommand{\kk}{^{(k)}}
+\newcommand{\kko}{^{(k+1)}}
+\newcommand{\ii}{^{(i)}}
+
+%%%% XU %%%%%
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amssymb,amsthm}
+
+%% editing
+\usepackage[shortlabels]{enumitem}
+\usepackage[normalem]{ulem}
+
+%% macros for commenting
+\usepackage{mathtools}
+\usepackage[normalem]{ulem} % to use \sout
+
+%% math packages
+% \usepackage{amsmath} % not needed for Springer
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+
+%\usepackage{subfigure}
+%\usepackage{url}
+
+
+%% highlighting and commenting
+\newcommand{\outline}[1]{{\color{brown}#1}}
+\newcommand{\rev}[1]{{\color{blue}#1}}
+\newcommand{\remove}[1]{{\sout{#1}}}
+\newcommand{\cut}[1]{{}}
+
+%% macros for letters
+
+\newcommand{\va}{{\mathbf{a}}}
+\newcommand{\vc}{{\mathbf{c}}}
+\newcommand{\vd}{{\mathbf{d}}}
+\newcommand{\ve}{{\mathbf{e}}}
+\newcommand{\vf}{{\mathbf{f}}}
+\newcommand{\vg}{{\mathbf{g}}}
+\newcommand{\vh}{{\mathbf{h}}}
+\newcommand{\vi}{{\mathbf{i}}}
+\newcommand{\vj}{{\mathbf{j}}}
+\newcommand{\vk}{{\mathbf{k}}}
+\newcommand{\vl}{{\mathbf{l}}}
+\newcommand{\vm}{{\mathbf{m}}}
+\newcommand{\vn}{{\mathbf{n}}}
+\newcommand{\vo}{{\mathbf{o}}}
+\newcommand{\vs}{{\mathbf{s}}}
+\newcommand{\vt}{{\mathbf{t}}}
+\newcommand{\vu}{{\mathbf{u}}}
+\newcommand{\vv}{{\mathbf{v}}}
+\newcommand{\vw}{{\mathbf{w}}}
+
+
+
+\newcommand{\vB}{{\mathbf{B}}}
+\newcommand{\vC}{{\mathbf{C}}}
+\newcommand{\vD}{{\mathbf{D}}}
+\newcommand{\vE}{{\mathbf{E}}}
+\newcommand{\vF}{{\mathbf{F}}}
+\newcommand{\vG}{{\mathbf{G}}}
+\newcommand{\vH}{{\mathbf{H}}}
+\newcommand{\vI}{{\mathbf{I}}}
+\newcommand{\vJ}{{\mathbf{J}}}
+\newcommand{\vK}{{\mathbf{K}}}
+\newcommand{\vL}{{\mathbf{L}}}
+\newcommand{\vM}{{\mathbf{M}}}
+\newcommand{\vN}{{\mathbf{N}}}
+\newcommand{\vO}{{\mathbf{O}}}
+\newcommand{\vP}{{\mathbf{P}}}
+\newcommand{\vQ}{{\mathbf{Q}}}
+\newcommand{\vR}{{\mathbf{R}}}
+\newcommand{\vS}{{\mathbf{S}}}
+\newcommand{\vT}{{\mathbf{T}}}
+\newcommand{\vU}{{\mathbf{U}}}
+\newcommand{\vV}{{\mathbf{V}}}
+\newcommand{\vW}{{\mathbf{W}}}
+\newcommand{\vX}{{\mathbf{X}}}
+\newcommand{\vY}{{\mathbf{Y}}}
+\newcommand{\vZ}{{\mathbf{Z}}}
+
+\newcommand{\cA}{{\mathcal{A}}}
+\newcommand{\cB}{{\mathcal{B}}}
+\newcommand{\cC}{{\mathcal{C}}}
+\newcommand{\cD}{{\mathcal{D}}}
+\newcommand{\cE}{{\mathcal{E}}}
+\newcommand{\cF}{{\mathcal{F}}}
+\newcommand{\cG}{{\mathcal{G}}}
+\newcommand{\cH}{{\mathcal{H}}}
+\newcommand{\cI}{{\mathcal{I}}}
+\newcommand{\cJ}{{\mathcal{J}}}
+\newcommand{\cK}{{\mathcal{K}}}
+\newcommand{\cL}{{\mathcal{L}}}
+\newcommand{\cM}{{\mathcal{M}}}
+\newcommand{\cN}{{\mathcal{N}}}
+\newcommand{\cO}{{\mathcal{O}}}
+\newcommand{\cP}{{\mathcal{P}}}
+\newcommand{\cQ}{{\mathcal{Q}}}
+\newcommand{\cR}{{\mathcal{R}}}
+\newcommand{\cS}{{\mathcal{S}}}
+\newcommand{\cT}{{\mathcal{T}}}
+\newcommand{\cU}{{\mathcal{U}}}
+\newcommand{\cV}{{\mathcal{V}}}
+\newcommand{\cW}{{\mathcal{W}}}
+\newcommand{\cX}{{\mathcal{X}}}
+\newcommand{\cY}{{\mathcal{Y}}}
+\newcommand{\cZ}{{\mathcal{Z}}}
+
+\newcommand{\ri}{{\mathrm{i}}}
+\newcommand{\rr}{{\mathrm{r}}}
+
+\newcommand{\EE}{{\mathbb{E}}}
+
+%% macros for math notions and operators
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\SS}{{\mathbb{S}}}
+\newcommand{\SSp}{\mathbb{S}_{+}}
+\newcommand{\SSpp}{\mathbb{S}_{++}}
+\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\vzero}{\mathbf{0}}
+\newcommand{\vone}{{\mathbf{1}}}
+
+\newcommand{\st}{{\text{s.t.}}} % subject to
+\newcommand{\St}{{\mathrm{subject~to}}} % subject to
+\newcommand{\op}{{\mathrm{op}}} % subscript for operator norm
+\newcommand{\opt}{{\mathrm{opt}}} % subscript for optimal solution
+%\newcommand{\supp}{{\mathrm{supp}}} % support
+\newcommand{\Prob}{{\mathrm{Prob}}} % probability
+\newcommand{\Diag}{{\mathrm{Diag}}} % vector -> diagonal matrix
+%\newcommand{\diag}{{\mathrm{diag}}} % matrix diagonal -> vector
+\newcommand{\dom}{{\mathrm{dom}}} % domain
+\newcommand{\range}{{\mathrm{range}}} % domain
+%\newcommand{\grad}{{\nabla}}    % gradient
+\newcommand{\tr}{{\mathrm{tr}}} % trace
+\newcommand{\TV}{{\mathrm{TV}}} % total variation
+\newcommand{\Proj}{{\mathrm{Proj}}}
+\newcommand{\prj}{{\mathrm{prj}}}
+\newcommand{\prox}{\mathbf{prox}}
+\newcommand{\refl}{\mathbf{refl}}
+\newcommand{\reflh}{\refl^{\bH}}
+\newcommand{\proxh}{\prox^{\bH}}
+\newcommand{\minimize}{\text{minimize}}
+\newcommand{\bgamma}{\boldsymbol{\gamma}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\blambda}{\boldsymbol{\lambda}}
+\newcommand{\bH}{\vH}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bB}{\boldsymbol{\cB}}
+\newcommand{\Tau}{\mathrm{T}}
+\newcommand{\tnabla}{\widetilde{\nabla}}
+\newcommand{\TDRS}{T_{\mathrm{DRS}}}
+\newcommand{\TPRS}{T_{\mathrm{PRS}}}
+\newcommand{\TFBS}{T_{\mathrm{FBS}}}
+\newcommand{\best}{\mathrm{best}}
+\newcommand{\kbest}{k_{\best}}
+\newcommand{\diff}{\mathrm{diff}}
+\newcommand{\barx}{\bar{x}}
+\newcommand{\xgbar}{\bar{x}_g}
+\newcommand{\xfbar}{\bar{x}_f}
+\newcommand{\hatxi}{\hat{\xi}}
+\newcommand{\xg}{x_g}
+\newcommand{\xf}{x_f}
+\newcommand{\du}{\mathrm{d}u}
+\newcommand{\dy}{\mathrm{d}y}
+\newcommand{\kconvergence}{\stackrel{k \rightarrow \infty}{\rightarrow }}
+\DeclareMathOperator{\shrink}{shrink} % shrinkage
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\Fix}{Fix}
+\DeclareMathOperator*{\zer}{zer}
+\DeclareMathOperator*{\nablah}{\nabla^{\bH}}
+\DeclareMathOperator*{\gra}{gra}
+\DeclarePairedDelimiter{\dotpb}{\langle}{\rangle_{\bH}}
+\DeclarePairedDelimiter{\dotpv}{\langle}{\rangle_{\vH}}
+\DeclarePairedDelimiter{\dotp}{\langle}{\rangle}
+
+%% macros for environments math equations
+
+\newcommand{\MyFigure}[1]{../fig/#1}
+
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+\newcommand{\bfl}{\begin{flushleft}}
+\newcommand{\efl}{\end{flushleft}}
+
+\newcommand{\bt}{\begin{tabbing}}
+\newcommand{\et}{\end{tabbing}}
+
+\newcommand{\beqn}{\begin{align}}
+\newcommand{\eeqn}{\end{align}}
+
+\newcommand{\beqs}{\begin{align*}} % no equation numbers
+\newcommand{\eeqs}{\end{align*}}  % no equation numbers
+
+\newtheorem{assumption}{Assumption}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{claim}{Claim}
+
+\usepackage{amsmath, amsthm, amssymb, calrsfs, wasysym, verbatim, bbm, color, graphics, geometry, setspace, listings}
+\geometry{tmargin= 1 in, bmargin= 1 in, lmargin= 1 in, rmargin = 1 in}  
+\usepackage[utf8]{inputenc}
+\setlength{\parindent}{4em}
+
+\begin{document}
+
+\section{Mathematical Formulation}
+\subsection{Notations}
+Before we state our problem, let us first define the notations used in the study. Our first-stage decision variable is binary such that,
+\begin{align*}
+    z_e =
+    \begin{cases}
+      1, & \text{if arc \textit{e} is used} \\
+      0, & \text{otherwise}
+    \end{cases}
+\end{align*}
+Our second stage decision variable $x_e^s$ is the flow on arc \textit{e} in scenario $s$.
+
+Deterministic data are defined below:
+\begin{align*}
+    s \ \ \ \ \ \ & \text{scenario,} \ \ \ \  \forall s = 1,...,S \\ 
+    f_e \ \ \ \ \ \ & \text{fixed charge for using arc} \ e \\
+    c_e \ \ \ \ \ \ & \text{cost of shipping one unit using arc} \ e \\
+    d \ \ \ \ \ \ & \text{demand}  \\
+    p_s \ \ \ \ \ \ & \text{probability}
+\shortintertext{%
+\hspace{1.55cm}  Random data used in the models are defined below:%
+}
+    u_e^s \ \ \ \ \ \ & \text{full capacity of arc} \ e \\
+    y_e^s \ \ \ \ \ \ & \text{unmet demand at arc} \ e \\
+    \sigma_e^s \ \ \ \ \ \ & \text{cost of shortfall}
+\end{align*}
+
+\subsection{Problem Statement}
+\begin{center}
+    \includegraphics[width=0.9\linewidth]{model.png}
+\end{center}
+
+In our network model (shown above), node A and B are supply nodes, node C, D, E, F are transshipment nodes, and node G is a demand node. Now we will define our linear program,
+\begin{equation*}
+\begin{array}{ll@{}ll}
+    \min_{x,y,z}      &   \sum_{e=1}^8 f_e z_e + \sum_{s=1}^S \bigg( \sum_{e=1}^8 p_s x_e^s c_e + p_s y_e^s \sigma_e^s \bigg) \\
+    \text{subject to} &   z_e \in  \{0,1\},\ \ \ \ \ \ \ \ \ \ \ \ \ \ e=1 ,\dots, 8 \\
+                      & 0  \le x_e^s  \le u_e^sz_e \ \ \ \ \ \ \ \ \ \  \forall s = 1,...,S \\
+                      & \sum_{e=1}^8 x_e^s  \ge d- y_e^s \\
+                      & x_7^s + x_8^s = d- y_e^s \\
+                      & x_1^s + x_2^s = x_4^s \\
+                      & x_5^s + x_6^s = x_5^s \\
+                      & x_4^s + x_5^s = x_7^s \\
+                      & x_6^s         = x_8^s
+\end{array}
+\end{equation*}
+We first have the constraint on our first-stage binary variable defined earlier. We also want the flow on arc $e$ in scenario $s$ to be nonnegative, but less than or equal to the full capacity of arc $e$, if used, i.e. 
+$$0 \le x_e^s \le u_e^sz_e \ \ \forall s = 1,...,S$$ The sum of all flows on arc $e$ in each scenario $s$ must be greater than or equal to the difference in demand and the shortfall, i.e. $$\sum_{e \ \text{into destination}} x_e^s \ge d-y_e^s$$ The equality constraints represent the flow conservation for each $s$.
+
+\end{document}
