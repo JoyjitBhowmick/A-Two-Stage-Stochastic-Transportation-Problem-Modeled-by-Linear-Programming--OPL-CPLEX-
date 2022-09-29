@@ -5,9 +5,8 @@ This study proposes a two-stage stochastic programming model of a transportation
 Before we state our problem, let us first define the notations used in the study. Our first-stage decision variable is binary such that,
 $$
 \begin{aligned}
-z_e =
-      1,  \\
-      0, 
+z_e = &1,  \\
+      &0, 
 \end{aligned}
 $$
 
