@@ -4,10 +4,9 @@ This study proposes a two-stage stochastic programming model of a transportation
 
 Before we state our problem, let us first define the notations used in the study. Our first-stage decision variable is binary such that,
 $$
-    z_e =
+z_e =
       1, & \text{if arc \textit{e} is used} \\
       0, & \text{otherwise}
-
 $$
 
 Our second stage decision variable $x_e^s$ is the flow on arc \textit{e} in scenario $s$.
