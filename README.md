@@ -4,5 +4,3 @@ This study proposes a two-stage stochastic programming model of a transportation
 ![The Transportation Network](model.png)
 
 The description and formulation of our minimization problem will be updated in the main.tex file along with a file of our proposed model.
-
-![The Exact Model Formulation](Exact Model Formulation.png)
