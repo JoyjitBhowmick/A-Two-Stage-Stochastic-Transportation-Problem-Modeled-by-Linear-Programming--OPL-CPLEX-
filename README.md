@@ -12,7 +12,7 @@ In our network model (shown above), node A and B are supply nodes, node C, D, E,
 Before we model the linear program, let us first define the notations used in this work as follows:
 
 ### Decision Varibales
-![The Transportation Network](decision_variables.jpg)
+![The Transportation Network](decision_variables.jpg| width=100)
 
 ### Input Parameters
 The following are the notations for the parameter input data that we have used as following (we have used a bar sign to indicate the stochastic ones):
