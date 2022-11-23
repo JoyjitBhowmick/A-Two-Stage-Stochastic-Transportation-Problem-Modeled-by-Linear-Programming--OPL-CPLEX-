@@ -7,7 +7,7 @@ This study proposes a two-stage stochastic programming model of a transportation
 In our network model (shown above), node A and B are supply nodes, node C, D, E, F are transshipment nodes, and node G is a demand node. 
 
 Before we model the linear program, let us first define the notations used in the study. Our first-stage decision variable is binary such that,
-![The Transportation Network](deterministic.JPG)
+![The Transportation Network](deterministic.jpg)
 ![The Transportation Network](notations.JPG)
 
 Now we will define our linear program,
