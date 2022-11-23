@@ -11,3 +11,5 @@ Before we model the linear program, let us first define the notations used in th
 ![The Transportation Network](notations.JPG)
 
 Now we will define our linear program,
+
+![The Transportation Network](lp_formulation.JPG)
