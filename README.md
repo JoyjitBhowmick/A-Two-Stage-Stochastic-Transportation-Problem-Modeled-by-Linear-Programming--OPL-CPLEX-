@@ -16,7 +16,9 @@ Before we model the linear program, let us first define the notations used in th
 
 ### Input Parameters
 The following are the notations for the parameter input data that we have used as following (we have used a bar sign to indicate the stochastic ones):
+
 ![The Transportation Network](input_parameter.jpg)
+
 ## Linear Programming Model
 Now we will define our linear program as follows
 ![The Transportation Network](lp_model.jpg)
