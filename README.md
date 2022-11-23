@@ -10,9 +10,10 @@ In our network model (shown above), node A and B are supply nodes, node C, D, E,
 Before we model the linear program, let us first define the notations used in the study. Our first-stage decision variable is binary such that,
 
 ### Decision Varibales
+![The Transportation Network](decision_variables.jpg)
 
 ### Input Parameters
-
+![The Transportation Network](input_parameter.jpg)
 ## Linear Programming Model
 Now we will define our linear program,
 
