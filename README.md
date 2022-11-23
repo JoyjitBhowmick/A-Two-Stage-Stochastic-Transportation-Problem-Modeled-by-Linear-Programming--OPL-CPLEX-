@@ -15,12 +15,10 @@ Before we model the linear program, let us first define the notations used in th
 ![The Transportation Network](decision_variables.jpg)
 
 ### Input Parameters
+The following are the notations for the parameter input data that we have used as following (we have used a bar sign to indicate the stochastic ones):
 ![The Transportation Network](input_parameter.jpg)
 ## Linear Programming Model
 Now we will define our linear program as follows
 ![The Transportation Network](lp_model.jpg)
-The equality constraints represent the flow conservation for each s. We first have the constraint on our first-stage binary variable defined earlier. We also want the flow on arc e in scenario s to be nonnegative, but less than or equal to the full capacity of arc e, if used, i.e.
 
-![The Transportation Network](capacity.JPG)
-The sum of all flows on arc e in each scenario s must be greater than or equal to the difference in demand and the shortfall, i.e.
-![The Transportation Network](shortfall.JPG)
+
